@@ -1,8 +1,13 @@
 import React from 'react'
+import MainContent from './homeContents/MainContent'
+import MyCarrer from './homeContents/MyCarrer'
 
 const About = () => {
   return (
-    <div>About</div>
+    <>
+      <MainContent />
+      <MyCarrer />
+    </>
   )
 }
 

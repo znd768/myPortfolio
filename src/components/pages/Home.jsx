@@ -4,25 +4,18 @@ import { motion } from "framer-motion";
 const Home = () => {
   const text = "Welcome to My Portfolio Site!";
   return (
-    <motion.div className=" h-[calc(100vh-5rem)] p-12 flex flex-col gap-12 dark:bg-zinc-900 dark:text-white">
-      <motion.h1 className=" text-8xl font-bold font-Niconne leading-loose bg-gradient-to-r from-deep-skyblue via-mint-skyblue to-mint inline-block text-transparent bg-clip-text">
-        {text.split("").map((letter, idx) => (
-          <motion.span
-          key={idx}
-            initial={{ y: 100 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 2, duration: 0.2 }}
-          >
-            {letter}
-          </motion.span>
-        ))}
+    <motion.div className=" h-[calc(100vh-5rem)] p-12 flex flex-col gap-12 dark:bg-zinc-900 dark:text-white bg-gray-300 text-black">
+      <motion.h1 className=" px-3 text-[6rem] font-bold font-Niconne leading-tight bg-gradient-to-r from-deep-skyblue via-mint-skyblue to-mint text-transparent bg-clip-text">
+        {text}
       </motion.h1>
-      <div className=" flex flex-row gap-8 bg-sky-700">
-        <div className=" flex-auto max-w-1/2 w-full bg-gray-500">
-          <div></div>
+      <div className=" flex flex-row justify-around">
+        <div className=" w-[48%] pl-16 py-8">
+          <div className=" flex flex-col align-center justify-center">
+            <h2 className=" text-6xl">Hello, I'm<p className=" text-green-600">Gaku Fujimoto</p></h2>
+          </div>
         </div>
-        <div className=" flex-auto w-full overflow-hidden rounded-xl">
-          <img src="/home_cat.jpg" alt="" className=" aspect-square" />
+        <div className=" w-[48%] p-8">
+          <img src="/home_cat.jpg" alt="" className=" aspect-square rounded-xl" />
         </div>
       </div>
     </motion.div>
