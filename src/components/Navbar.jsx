@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { NavLink, Outlet, useLocation, Link } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Sidebar from "./sidebar/Sidebar";
+import Nav from "./Nav";
 
 const Navbar = ({toggleDarkMode}) => {
   const location = useLocation();
@@ -17,47 +19,8 @@ const Navbar = ({toggleDarkMode}) => {
           <img src="/top_icon.png" alt="" className=" h-4/5 aspect-auto" />
           <div className=" text-3xl font-bold">タイトル</div>
         </Link>
-        <div className=" flex h-full">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              ` w-20 grid place-items-center ${
-                isActive ? "border-b-4 border-sky-400" : ""
-              }`
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              ` w-20 grid place-items-center ${
-                isActive ? "border-b-4 border-sky-400" : ""
-              }`
-            }
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              ` w-20 grid place-items-center ${
-                isActive ? "border-b-4 border-sky-400" : ""
-              }`
-            }
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              ` w-20 grid place-items-center ${
-                isActive ? "border-b-4 border-sky-400" : ""
-              }`
-            }
-          >
-            Contact
-          </NavLink>
+        <div className=" hidden lg:flex h-full">
+          <Nav />
           <div className=" flex flex-col items-center justify-center">
             <div
               className={` w-[6.5rem] h-14 bg-white/40 flex justify-start items-center rounded-full p-2 cursor-pointer ${
@@ -75,6 +38,9 @@ const Navbar = ({toggleDarkMode}) => {
               />
             </div>
           </div>
+        </div>
+        <div className=" lg:hidden">
+          <Sidebar />
         </div>
       </header>
     </>

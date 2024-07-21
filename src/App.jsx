@@ -13,7 +13,7 @@ function Layout({toggleDarkMode}) {
     <>
       <Navbar toggleDarkMode={toggleDarkMode} />
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
