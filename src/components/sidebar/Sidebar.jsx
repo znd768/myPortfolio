@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ToggleButton from "./toggleButton/ToggleButton";
 import Navigation from "./toggleButton/Navigation";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const variants = {
   open: {
@@ -25,6 +26,13 @@ const variants = {
 const Sidebar = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (isOpen) {
+      toggleOpen();
+    }
+  }, [location]);
 
   return (
     <motion.div
