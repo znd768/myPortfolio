@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { NavLink, useLocation, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import Sidebar from "./sidebar/Sidebar";
 import Nav from "./Nav";
 
 const Navbar = ({toggleDarkMode}) => {
-  const location = useLocation();
   const [isOn, setIsOn] = useState(false);
   const spring = {
     type: "spring",
     stiffness: 700,
     damping: 30,
   };
+  const location = useLocation()
   return (
     <>
       <header className=" h-20 bg-cyan-300 dark:bg-slate-800 dark:text-white flex justify-between items-center px-8">
@@ -40,7 +40,7 @@ const Navbar = ({toggleDarkMode}) => {
           </div>
         </div>
         <div className=" lg:hidden">
-          <Sidebar />
+          <Sidebar key={location.pathname}/>
         </div>
       </header>
     </>
