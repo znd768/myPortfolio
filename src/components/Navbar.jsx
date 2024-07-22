@@ -13,7 +13,7 @@ const Navbar = ({toggleDarkMode}) => {
   };
   return (
     <>
-      <header className=" h-20 bg-cyan-300 dark:bg-slate-800 dark:text-white flex justify-between items-center px-8">
+      <header className=" h-20 bg-light-theme-3 dark:bg-dark-theme-4 flex justify-between items-center px-8">
         <Link to="/" className=" flex gap-6 h-full items-center">
           <img src="/top_icon.png" alt="" className=" h-4/5 aspect-auto" />
           <div className=" text-3xl font-bold">タイトル</div>

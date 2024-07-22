@@ -34,7 +34,7 @@ const Nav = () => {
               {link.name}
             </NavLink>
             {link.path === location.pathname ? (
-              <motion.div layoutId="underline" className=" border-b-4 border-sky-400"/>
+              <motion.div layoutId="underline" className=" border-b-4 border-indigo-400 dark:border-sky-400"/>
             ) : null}
           </li>
         );

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   const text = "Welcome to My Portfolio Site!";
   return (
-    <motion.div className=" min-h-[calc(100vh-5rem)] p-12 flex flex-col gap-4 dark:bg-zinc-900 dark:text-white text-black">
+    <motion.div className=" min-h-[calc(100vh-5rem)] p-12 flex flex-col gap-4">
       <motion.h1 className=" self-start p-3 text-4xl md:text-6xl xl:text-8xl font-bold font-Niconne leading-tight bg-gradient-to-r from-deep-skyblue via-mint-skyblue to-mint text-transparent bg-clip-text">
         {text}
       </motion.h1>
@@ -13,7 +13,7 @@ const Home = () => {
           <div className=" flex flex-col align-center justify-center gap-2 lg:gap-4">
             <h2 className=" text-3xl sm:text-4xl lg:text-6xl">
               Hello, I'm
-              <span className=" indent-4 lg:indent-0 inline-block lg:block text-green-600">Gaku Fujimoto</span>
+              <span className=" indent-4 lg:indent-0 inline-block lg:block text-dark-theme-3">Gaku Fujimoto</span>
             </h2>
             <div className=" leading-5 lg:leading-6 lg:text-[1.2rem]">
               <p>I'm a web developer living in Tokyo.</p>

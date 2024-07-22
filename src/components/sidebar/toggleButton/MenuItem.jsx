@@ -36,7 +36,7 @@ const MenuItem = ({ i }) => {
       whileHover={{scale: 1.1}}
       whileTap={{scale: 0.95}}
     >
-      <Link to={links[i].path} className=" w-full inline-block">
+      <Link to={links[i].path} className=" w-full inline-block dark:text-white">
         {links[i].name}
       </Link>
     </motion.li>

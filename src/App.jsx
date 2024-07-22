@@ -19,13 +19,12 @@ function Layout({toggleDarkMode}) {
 }
 
 export default function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
   return (
-    <main className={`${isDarkMode ? "dark" : ""} scroll-smooth`}>
-      {/* <button onClick={toggleDarkMode}>toggledarkmode</button> */}
+    <main className={`${isDarkMode ? "dark" : ""} scroll-smooth dark:text-white text-light-theme-text dark:bg-dark-theme-black bg-light-theme-white`}>
       <Routes>
         <Route path="/" element={<Layout toggleDarkMode={toggleDarkMode} />}>
           <Route exact path="/" element={<Home />} />
