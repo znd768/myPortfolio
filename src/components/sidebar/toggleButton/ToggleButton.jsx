@@ -1,15 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "../../ThemeContext";
 
-const Path = (props) => (
+const Path = (props) => {
+  const darkTheme = useTheme()
+  const strokeColor = darkTheme ? 'hsl(0, 100%, 100%)' : 'hsl(0, 0%, 18%)'
+  return (
   <motion.path
     fill={"transparent"}
     strokeWidth={"3"}
-    stroke={"hsl(0, 0%, 18%)"}
+    stroke={strokeColor}
     strokeLinecap={"round"}
     {...props}
   />
-);
+)};
 const ToggleButton = ({ toggle }) => {
   return (
     <button

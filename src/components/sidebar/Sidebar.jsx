@@ -43,7 +43,7 @@ const Sidebar = () => {
     >
       <motion.div
         variants={variants}
-        className=" fixed top-0 right-0 z-10 w-[300px] h-screen grid place-items-center dark:bg-dark-theme-1"
+        className=" fixed top-0 right-0 z-10 w-[300px] h-screen grid place-items-center bg-light-theme-1 dark:bg-dark-theme-1"
       >
         <Navigation />
       </motion.div>
