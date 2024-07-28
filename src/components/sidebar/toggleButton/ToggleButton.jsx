@@ -18,7 +18,7 @@ const ToggleButton = ({ toggle }) => {
   return (
     <button
       onClick={toggle}
-      className=" w-14 h-14 rounded-full outline-none border-none cursor-pointer fixed top-3 right-3 z-30 grid place-items-center"
+      className=" w-[56px] h-[56px] rounded-full outline-none border-none cursor-pointer fixed top-[12px] right-[12px] z-30 grid place-items-center"
     >
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path

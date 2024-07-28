@@ -1,21 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import PageContent from "../PageContent";
 
 const MainContent = () => {
   return (
-    <section className=" h-[calc(100vh-5rem)] p-12 snap-end flex flex-col">
-      <h1 className="">About Me</h1>
-      <div className=" flex lg:flex-row">
-        {/* text */}
-        <div className=" w-1/2">
-          <p>走るのが好きです</p>
-        </div>
-        {/* image? */}
-        <div className=" w-1/2">
-        <p>test</p>
-        </div>
-      </div>
-    </section>
+    <PageContent>
+      <h1 className=" text-2xl lg:text-3xl xl:text-4xl">About Me</h1>
+    </PageContent>
   );
 };
 

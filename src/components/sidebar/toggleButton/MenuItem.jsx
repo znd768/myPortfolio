@@ -1,7 +1,7 @@
 import React from "react";
 import { links } from "../../links";
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 
 const colors = [
   "border-[#1A1A40]",

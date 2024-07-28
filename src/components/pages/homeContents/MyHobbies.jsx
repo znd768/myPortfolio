@@ -1,10 +1,11 @@
 import React from "react";
+import PageContent from "../PageContent";
 
 const MyHobbies = () => {
   return (
-    <section className=" h-screen p-12 snap-start flex flex-col">
-      My Hobbies
-    </section>
+    <PageContent>
+      <h1 className=" text-2xl lg:text-3xl xl:text-4xl">My Hobbies</h1>
+    </PageContent>
   );
 };
 
