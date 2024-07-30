@@ -1,6 +1,6 @@
 import React from "react";
 import { links } from "../../links";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import { Link, ScrollRestoration } from "react-router-dom";
 
 const colors = [
@@ -31,12 +31,12 @@ const MenuItem = ({ i }) => {
   return (
     <motion.li
       key={links[i].name}
-      className={` p-1 text-2xl border-b-2 border-solid ${colors[i]}`}
+      className={`border-b-2 border-solid p-1 text-2xl ${colors[i]}`}
       variants={variants}
-      whileHover={{scale: 1.1}}
-      whileTap={{scale: 0.95}}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
     >
-      <Link to={links[i].path} className=" w-full inline-block dark:text-white">
+      <Link to={links[i].path} className="inline-block w-full dark:text-white">
         {links[i].name}
       </Link>
     </motion.li>

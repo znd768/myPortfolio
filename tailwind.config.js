@@ -34,6 +34,8 @@ export default {
         'deep-skyblue': '#478CCF',
         'blue-violet': '#4535C1',
         'near-black': '#919191',
+        'trans-black': 'rgb(0 0 0 / 0.17)',
+        'trans-white': 'rgb(255 255 255 / 0.91)',
       },
     },
   },

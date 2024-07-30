@@ -25,4 +25,18 @@
     clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
     backface-visibility: hidden;
   }
+  circle {
+    /* stroke-width: 10px; */
+    stroke-linecap: round;
+    fill: transparent;
+  }
+  .svg-container {
+    width: 100%; /* コンテナの幅を調整します */
+    height: auto; /* 高さを自動に設定します */
+  }
+
+  .test {
+    width: 100%; /* SVGの幅をコンテナに合わせます */
+    height: auto; /* 高さを自動に設定します */
+  }
 }

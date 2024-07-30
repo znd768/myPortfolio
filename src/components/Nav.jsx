@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 const Nav = () => {
   const location = useLocation();
   return (
-    <motion.ul className=" flex flex-row items-center h-full">
+    <motion.ul className="flex h-full flex-row items-center">
       {links.map((link) => {
         return (
-          <li key={link.name} className=" h-full">
+          <li key={link.name} className="h-full">
             <NavLink
               to={link.path}
-              className=" w-20 grid place-items-center h-[calc(100%-4px)] "
+              className="grid h-[calc(100%-4px)] w-20 place-items-center"
             >
               {link.name}
             </NavLink>
@@ -20,8 +20,8 @@ const Nav = () => {
               <motion.div
                 layoutId="underline"
                 layout
-                className=" border-b-4 border-indigo-400 dark:border-sky-400"
-                style={{originY: "0px"}}
+                className="border-b-4 border-indigo-400 dark:border-sky-400"
+                style={{ originY: "0px" }}
               />
             ) : null}
           </li>

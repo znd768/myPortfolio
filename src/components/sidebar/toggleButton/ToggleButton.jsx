@@ -3,22 +3,23 @@ import { motion } from "framer-motion";
 import { useTheme } from "../../ThemeContext";
 
 const Path = (props) => {
-  const darkTheme = useTheme()
-  const strokeColor = darkTheme ? 'hsl(0, 100%, 100%)' : 'hsl(0, 0%, 18%)'
+  const darkTheme = useTheme();
+  const strokeColor = darkTheme ? "hsl(0, 100%, 100%)" : "hsl(0, 0%, 18%)";
   return (
-  <motion.path
-    fill={"transparent"}
-    strokeWidth={"3"}
-    stroke={strokeColor}
-    strokeLinecap={"round"}
-    {...props}
-  />
-)};
+    <motion.path
+      fill={"transparent"}
+      strokeWidth={"3"}
+      stroke={strokeColor}
+      strokeLinecap={"round"}
+      {...props}
+    />
+  );
+};
 const ToggleButton = ({ toggle }) => {
   return (
     <button
       onClick={toggle}
-      className=" w-[56px] h-[56px] rounded-full outline-none border-none cursor-pointer fixed top-[12px] right-[12px] z-30 grid place-items-center"
+      className="fixed right-[12px] top-[12px] z-30 grid h-[56px] w-[56px] cursor-pointer place-items-center rounded-full border-none outline-none"
     >
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path

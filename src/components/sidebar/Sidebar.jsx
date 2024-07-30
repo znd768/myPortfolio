@@ -39,11 +39,11 @@ const Sidebar = () => {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       ref={containerRef}
-      className=" flex flex-col items-center justify-center h-full"
+      className="flex h-full flex-col items-center justify-center"
     >
       <motion.div
         variants={variants}
-        className=" fixed top-0 right-0 z-10 w-[300px] h-screen grid place-items-center bg-light-theme-1 dark:bg-dark-theme-1"
+        className="fixed right-0 top-0 z-20 grid h-screen w-[300px] place-items-center bg-light-theme-1 dark:bg-dark-theme-1"
       >
         <Navigation />
       </motion.div>
@@ -54,7 +54,7 @@ const Sidebar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.3 } }}
-            className=" fixed top-0 left-0 w-full h-full backdrop-blur-sm"
+            className="fixed left-0 top-0 z-10 h-full w-full backdrop-blur-sm"
             onClick={toggleOpen}
           />
         )}
