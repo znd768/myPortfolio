@@ -42,9 +42,7 @@ const Navbar = ({ toggleDarkMode }) => {
             </div>
           </div>
         </div>
-        <div className="lg:hidden">
-          <Sidebar />
-        </div>
+        <Sidebar />
       </motion.header>
     </>
   );

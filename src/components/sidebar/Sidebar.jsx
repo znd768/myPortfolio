@@ -39,13 +39,15 @@ const Sidebar = () => {
       initial={false}
       animate={isOpen ? "open" : "closed"}
       ref={containerRef}
-      className="flex h-full flex-col items-center justify-center"
+      className="flex h-full flex-col items-center justify-center lg:hidden"
     >
       <motion.div
         variants={variants}
-        className="fixed right-0 top-0 z-20 grid h-screen w-[300px] place-items-center bg-light-theme-1 dark:bg-dark-theme-1"
+        className="absolute right-0 top-0 z-20 h-full w-[300px] bg-light-theme-1 dark:bg-dark-theme-1"
       >
-        <Navigation />
+        <div className=" h-screen w-full grid place-items-center">
+          <Navigation />
+        </div>
       </motion.div>
       <ToggleButton toggle={toggleOpen} />
       <AnimatePresence>
