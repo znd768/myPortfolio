@@ -6,7 +6,10 @@ export const useTheme = () => useContext(ThemeContext);
 export const useThemeUpdate = () => useContext(ThemeUpdateContext);
 
 export function ThemeProvider({ children }) {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const initialMode =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [darkTheme, setDarkTheme] = useState(initialMode);
   const toggleTheme = () => setDarkTheme(!darkTheme);
 
   return (
