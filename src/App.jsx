@@ -1,12 +1,15 @@
 import { Outlet, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import NotFound from "./components/NotFound";
-import Home from "./components/pages/Pages/Home";
-import About from "./components/pages/Pages/About";
-import Projects from "./components/pages/Pages/Projects";
-import Contact from "./components/pages/Pages/Contact";
-import Footer from "./components/Footer";
-import { useTheme, useThemeUpdate } from "./components/ThemeContext";
+import Navbar from "./components/pageParts/navbar/Navbar";
+import NotFound from "./components/pages/NotFound";
+import Home from "./components/pages/Home";
+import About from "./components/pages/about/About";
+import Projects from "./components/pages/Projects";
+import Contact from "./components/pages/Contact";
+import Footer from "./components/pageParts/Footer";
+import {
+  useTheme,
+  useThemeUpdate,
+} from "./components/pageFunctions/ThemeContext";
 
 function Layout({ toggleDarkMode }) {
   return (
