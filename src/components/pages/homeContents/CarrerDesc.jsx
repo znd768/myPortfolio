@@ -37,7 +37,13 @@ const carrer = [
     event: ["フルスタックエンジニア"],
   },
 ];
-const margin = [58, 249, 384, 482, 668];
+const margin = [
+  "mt-[calc(58px-1.8rem)]",
+  "mt-[calc(249px-58px-6rem)]",
+  "mt-[calc(384px-249px-6rem)]",
+  "mt-[calc(482px-384px-6rem)]",
+  "mt-[calc(668px-482px-6rem)]",
+];
 
 const CarrerDesc = () => {
   return (
@@ -47,16 +53,9 @@ const CarrerDesc = () => {
       animate="animate"
     >
       {carrer.map((v, i) => {
-        let mt = "";
-        if (i == 0) {
-          mt = `${margin[i]}px-1.8rem`;
-        } else {
-          mt = `${margin[i]}px-${margin[i - 1]}px-6rem`;
-        }
-
         return (
           <motion.div
-            className={`relative mt-[calc(${mt})] grid h-24 w-full place-items-center rounded-lg bg-trans-white after:invisible after:absolute after:left-[-8rem] after:top-[20%] after:h-8 after:w-32 after:translate-y-[-20%] after:bg-trans-white after:content-[''] after:[clip-path:polygon(100%_0%,50%_50%,100%_100%)] md:w-[60%] md:after:visible lg:w-[80%] xl:w-[60%] dark:bg-dark-theme-1 after:dark:bg-dark-theme-1`}
+            className={`relative ${margin[i]} grid h-24 w-full place-items-center rounded-lg bg-trans-white after:invisible after:absolute after:left-[-8rem] after:top-[20%] after:h-8 after:w-32 after:translate-y-[-20%] after:bg-trans-white after:content-[''] after:[clip-path:polygon(100%_0%,50%_50%,100%_100%)] md:w-[60%] md:after:visible lg:w-[80%] xl:w-[60%] dark:bg-dark-theme-1 after:dark:bg-dark-theme-1`}
             variants={drawCarrer}
             custom={i + 1}
             key={v.when}

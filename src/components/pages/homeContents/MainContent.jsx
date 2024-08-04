@@ -18,7 +18,7 @@ const MainContent = () => {
           </div>
           {/* right side */}
           <div className="hidden h-full w-full flex-col p-12 lg:flex xl:w-1/2">
-            a
+          <h2></h2>
           </div>
         </div>
       </div>
