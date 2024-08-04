@@ -46,9 +46,26 @@ const Home = () => {
               <span className="rounded-full bg-orange-600 px-3 py-1">AP</span>
             </div>
           </div>
-          <div className=" flex flex-row gap-2">
-            <a href="#">github</a>
-            <a href="#">AtCoder</a>
+          <div className="flex flex-col gap-y-1">
+            <h3 className="text-xl lg:text-4xl">Links</h3>
+            <div className="flex flex-row flex-wrap gap-x-3">
+              <a
+                href="https://github.com/znd768"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 hover:text-light-theme-white dark:border-white dark:hover:bg-light-theme-white dark:hover:text-black"
+              >
+                github
+              </a>
+              <a
+                href="https://atcoder.jp/users/mirari"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 hover:text-light-theme-white dark:border-white dark:hover:bg-light-theme-white dark:hover:text-black"
+              >
+                AtCoder
+              </a>
+            </div>
           </div>
         </div>
         {/* image block */}
