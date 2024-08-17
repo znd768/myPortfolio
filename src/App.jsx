@@ -4,7 +4,7 @@ import NotFound from "./components/pages/NotFound";
 import Home from "./components/pages/Home";
 import About from "./components/pages/about/About";
 import Projects from "./components/pages/Projects";
-import Contact from "./components/pages/Contact";
+import Contact from "./components/pages/contact/Contact";
 import Footer from "./components/pageParts/Footer";
 import {
   useTheme,
