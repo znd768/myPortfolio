@@ -1,45 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Sidebar from "./../sidebar/Sidebar";
 import Nav from "./Nav";
+import ModeToggle from "./ModeToggle";
 
-const Navbar = ({ toggleDarkMode }) => {
-  const [isOn, setIsOn] = useState(false);
-  const spring = {
-    type: "spring",
-    stiffness: 700,
-    damping: 30,
-  };
+const Navbar = () => {
   return (
-    <>
-      <motion.header
-        layout
-        layoutRoot
-        className="flex h-20 items-center justify-end bg-light-theme-3 px-8 dark:bg-dark-theme-4"
-      >
-        <div className="hidden h-full lg:flex">
-          <Nav />
-          <div className="flex flex-col items-center justify-center">
-            <div
-              className={`flex h-14 w-[6.5rem] cursor-pointer items-center justify-start rounded-full bg-white/40 p-2 ${
-                isOn ? "justify-end" : ""
-              }`}
-              onClick={() => {
-                toggleDarkMode();
-                setIsOn(!isOn);
-              }}
-            >
-              <motion.div
-                className="h-10 w-10 rounded-full bg-white"
-                layout
-                transition={spring}
-              />
-            </div>
-          </div>
-        </div>
-        <Sidebar />
-      </motion.header>
-    </>
+    <motion.header
+      layout
+      layoutRoot
+      className="flex h-20 items-center justify-end bg-light-theme-3 px-8 dark:bg-dark-theme-4"
+    >
+      <div className="hidden h-full lg:flex lg:gap-2">
+        <Nav />
+        <ModeToggle />
+      </div>
+      <Sidebar />
+    </motion.header>
   );
 };
 

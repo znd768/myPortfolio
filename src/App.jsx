@@ -6,15 +6,12 @@ import About from "./components/pages/about/About";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/contact/Contact";
 import Footer from "./components/pageParts/Footer";
-import {
-  useTheme,
-  useThemeUpdate,
-} from "./components/pageFunctions/ThemeContext";
+import { useTheme } from "./components/pageFunctions/ThemeContext";
 
-function Layout({ toggleDarkMode }) {
+function Layout() {
   return (
     <>
-      <Navbar toggleDarkMode={toggleDarkMode} />
+      <Navbar />
       <Outlet />
       {/* <Footer /> */}
     </>
@@ -23,7 +20,6 @@ function Layout({ toggleDarkMode }) {
 
 export default function App() {
   const darkTheme = useTheme();
-  const themeUpdate = useThemeUpdate();
   return (
     <main
       className={`${
@@ -31,7 +27,7 @@ export default function App() {
       } scroll-smooth bg-light-theme-white text-light-theme-text dark:bg-dark-theme-black dark:text-white`}
     >
       <Routes>
-        <Route path="/" element={<Layout toggleDarkMode={themeUpdate} />}>
+        <Route path="/" element={<Layout />}>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
