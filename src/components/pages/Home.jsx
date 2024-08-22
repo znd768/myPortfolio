@@ -1,10 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const skills = [
+  "HTML & CSS",
+  "JavaScript",
+  "React",
+  "Python",
+  "PHP",
+  "Postgresql",
+  "Git",
+];
+const qualifications = ["FE", "AP"];
+const links = [
+  { link: "https://github.com/znd768", name: "GitHub" },
+  { link: "https://atcoder.jp/users/mirari", name: "AtCoder" },
+];
+
 const Home = () => {
   return (
-    <div className="grid min-h-[calc(100vh-5rem)] place-items-center p-4 lg:p-12">
-      <div className="flex max-w-[1344px] flex-col-reverse items-center justify-center gap-8 lg:flex-row xl:gap-12">
+    <div className="grid min-h-[calc(100vh-5rem)] place-items-center p-4 lg:p-12 mt-12 lg:mt-0">
+      <div className="flex max-w-[1344px] flex-col-reverse items-center gap-8 lg:gap-0 justify-evenly lg:flex-row xl:gap-12">
         {/* profile block */}
         <div className="flex flex-col gap-2 lg:w-[48%] lg:justify-center lg:gap-4">
           <h1 className="text-4xl lg:text-6xl">
@@ -25,52 +40,46 @@ const Home = () => {
           <div className="flex flex-col gap-y-1">
             <h2 className="text-xl lg:text-4xl">skills</h2>
             <div className="flex flex-row flex-wrap gap-3 text-white">
-              <span className="rounded-full bg-sky-600 px-3 py-1">
-                HTML & CSS
-              </span>
-              <span className="rounded-full bg-sky-600 px-3 py-1">
-                Javascript
-              </span>
-              <span className="rounded-full bg-sky-600 px-3 py-1">Python</span>
-              <span className="rounded-full bg-sky-600 px-3 py-1">PHP</span>
-              <span className="rounded-full bg-sky-600 px-3 py-1">
-                Postgresql
-              </span>
-              <span className="rounded-full bg-sky-600 px-3 py-1">Git</span>
+              {skills.map((skill) => (
+                <span key={skill} className="rounded-full bg-sky-600 px-3 py-1">
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
           <div className="flex flex-col gap-y-1">
             <h2 className="text-xl lg:text-4xl">Qualifications</h2>
             <div className="flex flex-row flex-wrap gap-x-3 text-white">
-              <span className="rounded-full bg-orange-600 px-3 py-1">FE</span>
-              <span className="rounded-full bg-orange-600 px-3 py-1">AP</span>
+              {qualifications.map((qualify) => (
+                <span
+                  key={qualify}
+                  className="rounded-full bg-orange-600 px-3 py-1"
+                >
+                  {qualify}
+                </span>
+              ))}
             </div>
           </div>
           <div className="flex flex-col gap-y-1">
             <h3 className="text-xl lg:text-4xl">Links</h3>
             <div className="flex flex-row flex-wrap gap-x-3">
-              <a
-                href="https://github.com/znd768"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 hover:text-light-theme-white dark:border-white dark:hover:bg-light-theme-white dark:hover:text-black"
-              >
-                github
-              </a>
-              <a
-                href="https://atcoder.jp/users/mirari"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 hover:text-light-theme-white dark:border-white dark:hover:bg-light-theme-white dark:hover:text-black"
-              >
-                AtCoder
-              </a>
+              {links.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 hover:text-light-theme-white dark:border-white dark:hover:bg-light-theme-white dark:hover:text-black"
+                >
+                  {item.name}
+                </a>
+              ))}
             </div>
           </div>
         </div>
         {/* image block */}
         <motion.div
-          className="size-[64%] self-center overflow-hidden sm:size-[48%] md:size-[56%] lg:size-[40%]"
+          className="size-[56%] self-center overflow-hidden sm:size-[48%] lg:size-[32%] dark:bg-dark-theme-2 bg-light-theme-2"
           animate={{
             borderRadius: [
               "38% 62% 37% / 41% 44% 56% 59%",
@@ -86,7 +95,7 @@ const Home = () => {
             repeatType: "mirror",
           }}
         >
-          <img src="/home_cat.jpg" alt="" className="aspect-square" />
+          <img src="/myProfImage.png" alt="" className="" />
         </motion.div>
       </div>
     </div>
