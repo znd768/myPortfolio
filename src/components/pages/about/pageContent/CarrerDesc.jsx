@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const drawCarrer = {
   initial: { opacity: 0 },
   animate: (i) => {
-    const delay = i * 1.2;
+    const delay = (i + 1) * 1.2 + 0.1;
     return {
       opacity: 1,
       transition: {
@@ -46,12 +46,12 @@ const margin = [
   "mt-[calc(668px-482px-6rem)]",
 ];
 
-const CarrerDesc = () => {
+const CarrerDesc = ({ inView }) => {
   return (
     <motion.div
       className="flex h-full flex-grow flex-col items-center drop-shadow-2xl md:w-3/4 md:flex-grow-0"
       initial="initial"
-      animate="animate"
+      animate={inView && "animate"}
     >
       {carrer.map((v, i) => {
         return (

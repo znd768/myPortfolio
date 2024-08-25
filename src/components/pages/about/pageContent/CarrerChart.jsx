@@ -1,22 +1,22 @@
 import React from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const drawChart = {
   initial: { pathLength: 0, opacity: 0 },
   animate: (i) => {
-    const delay = i * 0.8;
+    const delay = i * 1.2;
     return {
       pathLength: 1,
       opacity: 1,
       transition: {
-        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+        pathLength: { delay, type: "spring", duration: 1.8, bounce: 0 },
         opacity: { delay, duration: 0.01 },
       },
     };
   },
 };
 
-const CarrerChart = () => {
+const CarrerChart = ({ inView }) => {
   return (
     <div className="flex w-16 flex-col items-center">
       <motion.svg
@@ -26,7 +26,7 @@ const CarrerChart = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         initial="initial"
-        animate="animate"
+        animate={inView && "animate"}
       >
         <motion.line
           x1="18"
@@ -66,8 +66,9 @@ const CarrerChart = () => {
           strokeWidth="4"
           strokeDasharray="8 8"
           initial={{ y2: 498 }}
-          animate={{ y2: 658 }}
-          transition={{ duration: 3, delay: 3.2 }}
+          animate={
+            inView && { y2: 658, transition: { delay: 4.8, duration: 3 } }
+          }
           className="stroke-dark-theme-black dark:stroke-white"
         />
         <motion.circle
@@ -78,7 +79,6 @@ const CarrerChart = () => {
           strokeWidth="4"
           variants={drawChart}
           custom={1}
-          className=""
         />
         <motion.circle
           cx="18"

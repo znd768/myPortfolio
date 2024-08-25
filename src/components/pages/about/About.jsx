@@ -1,11 +1,13 @@
 import React from "react";
 import MainContent from "./pageContent/MainContent";
+import Personality from "./pageContent/Personality";
 
 const About = () => {
   return (
-    <div className="">
+    <>
+      <Personality />
       <MainContent />
-    </div>
+    </>
   );
 };
 

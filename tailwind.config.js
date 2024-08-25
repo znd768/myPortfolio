@@ -18,7 +18,7 @@ export default {
         'Niconne': ['Niconne', 'sans-serif']
       },
       colors: {
-        'light-theme-white': '#ECF9FF',
+        'dark-theme-white': '#ECF9FF',
         'light-theme-text': '#3D3D3D',
         'light-theme-1': '#EEF1FF',
         'light-theme-2': '#D2DAFF',

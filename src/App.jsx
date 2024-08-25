@@ -24,7 +24,7 @@ export default function App() {
     <main
       className={`${
         darkTheme ? "dark" : ""
-      } scroll-smooth bg-light-theme-white text-light-theme-text dark:bg-dark-theme-black dark:text-white`}
+      } scroll-smooth bg-light-theme-white text-light-theme-text dark:bg-dark-theme-black dark:text-dark-theme-white`}
     >
       <Routes>
         <Route path="/" element={<Layout />}>

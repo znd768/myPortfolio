@@ -69,7 +69,7 @@ const Home = () => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 hover:text-light-theme-white dark:border-white dark:hover:bg-light-theme-white dark:hover:text-black"
+                  className="rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 hover:text-light-theme-white dark:border-white dark:hover:bg-dark-theme-white dark:hover:text-black"
                 >
                   {item.name}
                 </a>
