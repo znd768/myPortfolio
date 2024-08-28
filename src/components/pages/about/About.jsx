@@ -1,12 +1,12 @@
 import React from "react";
-import MainContent from "./pageContent/MainContent";
+import Carrer from "./pageContent/Carrer";
 import Personality from "./pageContent/Personality";
 
 const About = () => {
   return (
     <>
       <Personality />
-      <MainContent />
+      <Carrer />
     </>
   );
 };

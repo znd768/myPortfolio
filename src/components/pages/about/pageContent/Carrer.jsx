@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import CarrerDesc from "./CarrerDesc";
-import CarrerChart from "./CarrerChart";
+import CarrerDesc from "./carrerContent/CarrerDesc";
+import CarrerChart from "./carrerContent/CarrerChart";
 import { useInView } from "framer-motion";
 
-const MainContent = () => {
+const Carrer = () => {
   const ref = useRef();
   const inView = useInView(ref, { margin: "-300px 0px", once: true });
   return (
@@ -34,4 +34,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default Carrer;
