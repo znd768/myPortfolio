@@ -5,11 +5,11 @@ import { useInView } from "framer-motion";
 
 const Carrer = () => {
   const ref = useRef();
-  const inView = useInView(ref, { margin: "-300px 0px", once: true });
+  const inView = useInView(ref, { margin: "-50% 0px", once: true });
 
   return (
     <section className="flex min-h-screen flex-col gap-2 px-2 py-4 sm:gap-8 sm:px-6 lg:p-8 xl:p-14">
-      <h2 className="text-xl lg:text-2xl xl:text-4xl">My Carrer</h2>
+      <h2 className="text-xl lg:text-2xl xl:text-3xl">My Carrer</h2>
       <div
         className="flex w-[95%] max-w-[1344px] flex-grow items-center self-center sm:w-[90%] xl:w-full"
         ref={ref}
