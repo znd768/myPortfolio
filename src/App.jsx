@@ -1,7 +1,7 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 import Navbar from "./components/pageParts/navbar/Navbar";
 import NotFound from "./components/pages/NotFound";
-import Home from "./components/pages/Home";
+import Home from "./components/pages/homepage/Home";
 import About from "./components/pages/about/About";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/contact/Contact";
