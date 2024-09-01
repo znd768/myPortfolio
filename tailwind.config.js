@@ -37,6 +37,21 @@ export default {
         'trans-black': 'rgb(0 0 0 / 0.17)',
         'trans-white': 'rgb(255 255 255 / 0.91)',
       },
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))',
+        '20': 'repeat(20, minmax(0, 1fr))'
+      },
+      gridColumn: {
+        'span-16': 'span 16 / span 16',
+        'span-18': 'span 18 / span 18',
+      },
+      gridColumnEnd: {
+        '14': '14',
+        '16': '16',
+        '18': '18',
+        '19': '19',
+        '20': '20',
+      }
     },
   },
   plugins: [],
