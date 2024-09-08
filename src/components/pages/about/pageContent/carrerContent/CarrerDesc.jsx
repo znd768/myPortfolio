@@ -49,18 +49,19 @@ const margin = [
 const CarrerDesc = ({ inView }) => {
   return (
     <motion.div
-      className="flex h-full flex-grow flex-col items-center drop-shadow-2xl md:w-3/4 md:flex-grow-0"
+      className="col-start-3 -col-end-1 flex h-full flex-grow flex-col items-center sm:col-start-4 sm:-col-end-2 md:col-start-7 md:-col-end-4 lg:col-start-4 lg:-col-end-1"
       initial="initial"
       animate={inView && "animate"}
     >
       {carrer.map((v, i) => {
         return (
           <motion.div
-            className={`relative ${margin[i]} grid h-24 w-full place-items-center rounded-lg bg-trans-white after:invisible after:absolute after:left-[-8rem] after:top-[20%] after:h-8 after:w-32 after:translate-y-[-20%] after:bg-trans-white after:content-[''] after:[clip-path:polygon(100%_0%,50%_50%,100%_100%)] md:w-[60%] md:after:visible lg:w-[80%] xl:w-[60%] dark:bg-dark-theme-1 after:dark:bg-dark-theme-1`}
+            className={`relative ${margin[i]} grid h-24 w-full place-items-center rounded-lg bg-trans-white drop-shadow-xl dark:bg-dark-theme-1`}
             variants={drawCarrer}
             custom={i + 1}
             key={v.when}
           >
+            <div className="absolute left-[-8rem] top-[20%] hidden h-8 w-32 translate-y-[-20%] bg-trans-white [clip-path:polygon(100%_0%,50%_50%,100%_100%)] lg:block dark:bg-dark-theme-1"></div>
             <div className="w-[80%]">
               <p>{v.when}</p>
               {v.event.map((ev) => (

@@ -8,20 +8,18 @@ const Carrer = () => {
   const inView = useInView(ref, { margin: "-50% 0px", once: true });
 
   return (
-    <section className="flex min-h-screen flex-col gap-2 px-2 py-4 sm:gap-8 sm:px-6 lg:p-8 xl:p-14">
-      <h2 className="text-xl lg:text-2xl xl:text-3xl">My Carrer</h2>
-      <div
-        className="flex w-[95%] max-w-[1344px] flex-grow items-center self-center sm:w-[90%] xl:w-full"
-        ref={ref}
-      >
+    <section className="col-span-full grid grid-cols-subgrid gap-y-4 md:gap-y-12 min-h-screen" ref={ref}>
+      <h2 className="col-start-2 col-end-12 text-xl md:col-start-3 md:col-end-19 lg:text-2xl xl:text-3xl h-12 lg:h-24 flex lg:items-center items-end">
+        My Carrer
+      </h2>
         {/* left side */}
-        <div className="flex w-full flex-row justify-center lg:w-1/2 lg:justify-between xl:justify-center">
+        <div className="col-start-2 -col-end-2 md:col-start-2 md:-col-end-2 lg:col-start-2 lg:col-end-11 grid grid-cols-subgrid">
           {/* chart */}
           <CarrerChart inView={inView} />
           <CarrerDesc inView={inView} />
         </div>
         {/* right side */}
-        <div className="hidden w-1/2 pl-8 lg:block">
+        <div className="hidden md:col-start-12 md:-col-end-1 lg:block">
           <svg width="0" height="0">
             <defs>
               <clipPath id="clipPathId" clipPathUnits="userSpaceOnUse">
@@ -31,7 +29,6 @@ const Carrer = () => {
           </svg>
           <div className="clip-cat h-[812px] bg-gradient-to-b from-light-theme-3 to-transparent dark:from-dark-theme-1" />
         </div>
-      </div>
     </section>
   );
 };

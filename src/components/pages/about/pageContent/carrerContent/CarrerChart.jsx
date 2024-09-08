@@ -18,7 +18,7 @@ const drawChart = {
 
 const CarrerChart = ({ inView }) => {
   return (
-    <div className="flex w-16 flex-col items-center">
+    <div className="col-start-1 col-end-2 flex flex-col items-center sm:col-start-2 sm:col-end-3 md:col-start-4 md:col-end-5 lg:col-start-1 lg:col-end-3 xl:col-start-2">
       <motion.svg
         width="36"
         height="800"

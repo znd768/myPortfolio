@@ -35,7 +35,7 @@ const imgVariants = {
 
 const PersonalInfo = ({ title, putItemName, items, url }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "0px 0px -380px 0px" });
+  const isInView = useInView(ref, { margin: "-380px 0px" });
 
   return (
     <motion.div
