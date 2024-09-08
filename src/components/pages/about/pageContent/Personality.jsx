@@ -15,7 +15,7 @@ const personalInfo = [
     items: {
       item1: "learning trending web technology",
       item2: "watching MLB",
-      item3: "game play (video or card games)",
+      item3: "playing video or card games",
     },
     url: "./img2.png",
   },
