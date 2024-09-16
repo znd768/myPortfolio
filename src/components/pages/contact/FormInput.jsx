@@ -11,14 +11,14 @@ const FormInput = ({ tag, id, label, required, ...other }) => {
         <input
           id={id}
           {...other}
-          className="rounded-xl bg-trans-white px-3 md:px-6 py-2 md:text-2xl text-black outline-none "
+          className="border-b-2 border-light-theme-4 bg-transparent px-3 py-2 text-black outline-none md:px-6 md:text-2xl dark:border-dark-theme-3 dark:text-white"
           required={required}
         />
       ) : (
         <textarea
           id={id}
           {...other}
-          className="rounded-xl bg-trans-white px-3 py-2 md:p-6 md:text-2xl text-black outline-none"
+          className="border-b-2 border-light-theme-4 bg-transparent px-3 py-2 text-black outline-none md:p-6 md:text-2xl dark:border-dark-theme-3 dark:text-white"
         />
       )}
     </div>

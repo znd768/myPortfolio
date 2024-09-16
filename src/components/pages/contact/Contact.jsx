@@ -17,7 +17,7 @@ const inputList = [
     name: "name",
     type: "text",
     label: "Your Name",
-    placeholder: "Mike Shinoda",
+    placeholder: "",
     required: true,
   },
   {
@@ -86,13 +86,13 @@ const Contact = () => {
   };
 
   return (
-    <section className="grid-cols-20 mx-auto grid min-h-[calc(100vh-5rem)] max-w-[1344px] auto-rows-min gap-2 md:gap-4 lg:gap-y-0">
-      <h1 className="md:col-end-18 col-start-1 col-end-8 flex h-12 items-center text-2xl md:col-start-2 lg:h-24 lg:text-3xl xl:text-4xl">
+    <section className="relative mx-auto grid min-h-[calc(100vh-5rem)] max-w-[1344px] auto-rows-min grid-cols-20 gap-2 md:gap-4 lg:gap-y-0">
+      <h1 className="col-start-1 col-end-8 flex h-12 items-center text-2xl md:col-start-2 md:col-end-18 lg:h-24 lg:text-3xl xl:text-4xl">
         Contact
       </h1>
-      <div className="col-end-20 md:col-end-18 lg:col-end-20 col-start-2 grid grid-cols-subgrid items-center rounded-3xl bg-trans-black py-4 shadow-2xl backdrop-blur-2xl md:col-start-4 md:py-8 lg:col-start-2">
+      <div className="z-10 col-start-2 col-end-20 grid grid-cols-subgrid items-center rounded-3xl bg-light-theme-1 py-4 shadow-xl md:col-start-4 md:col-end-18 md:py-8 lg:col-start-2 lg:col-end-20 dark:bg-dark-theme-1">
         {/* left Side (illust) */}
-        <div className="col-start-1 col-end-9 hidden lg:block">
+        <div className="col-start-2 col-end-9 hidden lg:block">
           <div className="flex flex-col items-center">
             <img
               src="/Cat astronaut-rafiki.png"
@@ -110,7 +110,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Right Side (form) */}
-        <div className="col-end-18 md:col-end-14 lg:col-end-18 col-start-2 lg:col-start-10">
+        <div className="col-start-2 col-end-18 md:col-end-14 lg:col-start-10 lg:col-end-18">
           <form
             className="flex h-full flex-col justify-center gap-4"
             onSubmit={handleSubmit}
@@ -127,7 +127,7 @@ const Contact = () => {
             })}
             <button
               type="submit"
-              className="mt-4 bg-trans-white py-2 text-xl duration-100 hover:bg-light-theme-1 dark:bg-dark-theme-4 dark:hover:bg-dark-theme-1"
+              className="mt-4 bg-light-theme-2 py-2 text-xl duration-200 ease-in hover:bg-light-theme-3 dark:bg-[#1b356a] dark:hover:bg-dark-theme-4"
             >
               Send Message
             </button>

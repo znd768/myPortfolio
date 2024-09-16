@@ -34,7 +34,7 @@ const carrer = [
   },
   {
     when: "In a few years",
-    event: ["Web開発者として活躍"],
+    event: ["Web開発者としてキャリア形成"],
   },
 ];
 
