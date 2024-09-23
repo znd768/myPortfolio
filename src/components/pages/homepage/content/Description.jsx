@@ -43,7 +43,9 @@ const Description = () => {
       <h1 className="text-4xl lg:text-6xl lg:leading-snug">
         <div>Hello, I'm</div>
         <div className="h-22">
-          <div className="inline-block text-light-theme-4 dark:text-dark-theme-3">
+          <div
+            className={`inline-block text-light-theme-4 dark:text-dark-theme-3 ${animate ? "" : "after:text-white after:content-['.']"}`}
+          >
             {text}
           </div>
           <motion.span
