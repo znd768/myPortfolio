@@ -33,19 +33,19 @@ const imgVariants = {
   },
 };
 
-const PersonalInfo = ({ title, putItemName, items, url }) => {
+const PersonalInfo = ({ title, putItemName, items, url, desc }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-380px 0px" });
 
   return (
     <motion.div
-      className="col-span-full grid h-[520px] grid-cols-subgrid grid-rows-12 gap-2 overflow-hidden rounded-3xl bg-light-theme-2 lg:h-[768px] lg:gap-4 dark:bg-dark-theme-1"
+      className="col-span-full grid h-[520px] grid-cols-subgrid grid-rows-12 gap-2 overflow-hidden rounded-3xl bg-light-theme-2 shadow-md lg:h-[768px] lg:gap-4 dark:bg-dark-theme-1"
       variants={variants}
       initial="offscreen"
       animate={isInView && "onscreen"}
       ref={ref}
     >
-      <h3 className="col-start-2 col-end-10 row-start-9 self-center text-xl sm:col-start-2 sm:col-end-4 sm:row-start-3 sm:row-end-5 md:col-start-2 md:col-end-8 md:row-start-5 lg:row-start-4 lg:text-3xl">
+      <h3 className="col-start-2 col-end-10 row-start-9 self-center text-xl sm:col-start-2 sm:col-end-4 sm:row-start-4 md:col-start-2 md:col-end-8 md:row-start-3 lg:row-start-4 lg:text-3xl">
         {title}
       </h3>
       <div className="col-start-1 -col-end-1 row-start-10 -row-end-2 flex flex-col items-center justify-center text-lg sm:col-start-2 sm:col-end-10 sm:items-start md:col-start-2 md:col-end-9 md:row-start-6 md:row-end-9 md:items-center lg:col-start-1 lg:col-end-10 lg:text-xl xl:col-start-2 xl:col-end-8">
@@ -71,7 +71,7 @@ const PersonalInfo = ({ title, putItemName, items, url }) => {
       >
         <img
           src={url}
-          alt=""
+          alt={desc}
           className="aspect-square h-full w-full object-cover sm:h-auto sm:rounded-xl"
         />
       </motion.div>

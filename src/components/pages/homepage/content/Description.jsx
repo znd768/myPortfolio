@@ -39,12 +39,12 @@ const Description = () => {
   }, [animate]);
 
   return (
-    <div className="flex flex-col gap-2 lg:w-[48%] lg:justify-center lg:gap-4">
+    <div className="flex flex-col gap-4 md:gap-6 lg:w-[56%] lg:justify-center xl:w-[48%]">
       <h1 className="text-4xl lg:text-6xl lg:leading-snug">
-        <div>Hello, I'm</div>
+        <div className="h-22">Hello, I'm</div>
         <div className="h-22">
           <div
-            className={`inline-block text-light-theme-4 dark:text-dark-theme-3 ${animate ? "" : "after:text-white after:content-['.']"}`}
+            className={`inline-block text-indigo-400 dark:text-dark-theme-3 ${animate ? "" : "after:text-light-theme-text after:content-['.'] dark:after:text-white"}`}
           >
             {text}
           </div>
@@ -92,7 +92,7 @@ const Description = () => {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-light-theme-white rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 dark:border-white dark:hover:bg-dark-theme-white dark:hover:text-black"
+              className="rounded-md border border-light-theme-text px-3 py-1 duration-300 hover:bg-slate-800 hover:text-dark-theme-white dark:border-white dark:hover:bg-dark-theme-white dark:hover:text-black"
             >
               {item.name}
             </a>

@@ -7,7 +7,8 @@ const personalInfo = [
     title: "Profile",
     putItemName: true,
     items: { age: "27", birthplace: "Asahikawa, Hokkaido" },
-    url: "/img1.png",
+    url: "/highschool.jpg",
+    desc: "me_approx_10years_ago"
   },
   {
     title: "Hobbies",
@@ -17,13 +18,15 @@ const personalInfo = [
       item2: "watching MLB",
       item3: "playing video or card games",
     },
-    url: "./img2.png",
+    url: "./card.jpg",
+    desc: "card_photo"
   },
   {
     title: "Like",
     putItemName: false,
     items: { item1: "cats", item2: "listening to music" },
-    url: "./img3.png",
+    url: "./img2.png",
+    desc: "cat_looking_something"
   },
 ];
 

@@ -20,7 +20,7 @@ const ProfImage = () => {
         repeatType: "mirror",
       }}
     >
-      <img src="/myProfImage.png" alt="" className="" />
+      <img src="/myProfImage.png" alt="myProfImage" className="" />
     </motion.div>
   )
 }

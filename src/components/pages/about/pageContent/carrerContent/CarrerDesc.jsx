@@ -56,13 +56,13 @@ const CarrerDesc = ({ inView }) => {
       {carrer.map((v, i) => {
         return (
           <motion.div
-            className={`relative ${margin[i]} grid h-24 w-full place-items-center rounded-lg bg-trans-white drop-shadow-xl dark:bg-dark-theme-1`}
+            className={`relative ${margin[i]} grid h-24 w-full place-items-center rounded-lg bg-trans-white drop-shadow-xl dark:bg-dark-theme-1 pl-[6%] sm:pl-[10%]`}
             variants={drawCarrer}
             custom={i + 1}
             key={v.when}
           >
-            <div className="absolute left-[-8rem] top-[20%] hidden h-8 w-32 translate-y-[-20%] bg-trans-white [clip-path:polygon(100%_0%,50%_50%,100%_100%)] lg:block dark:bg-dark-theme-1"></div>
-            <div className="w-[80%]">
+            <div className="absolute left-[-8rem] top-[20%] hidden h-8 w-32 translate-y-[-20%] bg-trans-white [clip-path:polygon(100%_0%,50%_50%,100%_100%)] lg:block dark:bg-dark-theme-1" />
+            <div className=" flex flex-col items-start w-full">
               <p>{v.when}</p>
               {v.event.map((ev) => (
                 <p key={ev}>{ev}</p>

@@ -15,7 +15,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'Niconne': ['Niconne', 'sans-serif']
+        'poppins': ['Poppins', 'sans-serif']
       },
       colors: {
         'dark-theme-white': '#ECF9FF',
