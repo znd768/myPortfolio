@@ -18,7 +18,7 @@ const personalInfo = [
       item2: "watching MLB",
       item3: "playing video or card games",
     },
-    url: "./card.jpg",
+    url: "./card2.jpg",
     desc: "card_photo"
   },
   {
