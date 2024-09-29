@@ -3,7 +3,7 @@ import FormInput from "./FormInput";
 import { inputList } from "./inputList";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const RECAPTCHA_KEY = process.env.REACT_APP_SITE_RECAPTCHA_KEY;
+const RECAPTCHA_KEY = import.meta.env.VITE_SITE_RECAPTCHA_KEY;
 
 const initialInputs = {
   name: "",
