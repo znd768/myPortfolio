@@ -1,0 +1,2 @@
+[build]
+  command = "echo $VITE_SITE_RECAPTCHA_KEY && npm run build"
