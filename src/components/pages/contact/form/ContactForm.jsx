@@ -52,6 +52,7 @@ const ContactForm = () => {
     <div className="col-start-2 col-end-18 md:col-end-14 lg:col-start-10 lg:col-end-18">
       <form
         className="flex h-full flex-col justify-center gap-4"
+        data-netlify="true"
         data-netlify-recaptcha="true"
         onSubmit={handleSubmit}
       >
