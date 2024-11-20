@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const ProfImage = () => {
+const ProfImage = ({onImgLoad}) => {
   return (
     <motion.div
       className="size-[56%] self-center overflow-hidden sm:size-[48%] lg:size-[32%] dark:bg-dark-theme-2 bg-light-theme-2"
@@ -20,7 +20,7 @@ const ProfImage = () => {
         repeatType: "mirror",
       }}
     >
-      <img src="/myProfImage.png" alt="myProfImage" className="" />
+      <img onLoad={onImgLoad} src="/myProfImage.png" alt="myProfImage" className="" />
     </motion.div>
   )
 }

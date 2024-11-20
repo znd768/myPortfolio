@@ -18,10 +18,16 @@ const links = [
 
 const name = "Gaku Fujimoto";
 
-const Description = () => {
+const Description = ({isImgLoaded}) => {
   const [text, setText] = useState("");
-  const [animate, setAnimate] = useState(true);
+  const [animate, setAnimate] = useState(false);
   const intValRef = useRef(null);
+
+  useEffect(() => {
+    if (isImgLoaded) {
+      setAnimate(true);
+    }
+  }, [isImgLoaded]);
 
   useEffect(() => {
     if (animate) {
@@ -41,23 +47,27 @@ const Description = () => {
   return (
     <div className="flex flex-col gap-4 md:gap-6 lg:w-[56%] lg:justify-center xl:w-[48%]">
       <h1 className="text-4xl lg:text-6xl lg:leading-snug">
-        <div className="h-22">Hello, I'm</div>
+        <div className="h-22">Hello, I&apos;m</div>
         <div className="h-22">
           <div
             className={`inline-block text-indigo-400 dark:text-dark-theme-3 ${animate ? "" : "after:text-light-theme-text after:content-['.'] dark:after:text-white"}`}
           >
             {text}
           </div>
-          <motion.span
-            className="border-r-2 border-light-theme-text dark:border-white"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 0 }}
-            transition={{ repeat: 6, duration: 1, delay: 4 }}
-          ></motion.span>
+          {isImgLoaded ? (
+            <motion.span
+              className="border-r-2 border-light-theme-text dark:border-white"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
+              transition={{ repeat: 6, duration: 1, delay: 4 }}
+            ></motion.span>
+          ) : (
+            ""
+          )}
         </div>
       </h1>
       <div className="leading-5 sm:text-xl sm:leading-6 lg:text-[1.2rem] lg:leading-6">
-        <p>I'm a web developer living in Tokyo.</p>
+        <p>I&apos;m a web developer living in Tokyo.</p>
         <p>I hope your coming here will be good for you.</p>
       </div>
       <div className="flex flex-col gap-y-2">
@@ -102,5 +112,4 @@ const Description = () => {
     </div>
   );
 };
-
 export default Description;
