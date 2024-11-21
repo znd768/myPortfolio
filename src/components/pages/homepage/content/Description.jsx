@@ -18,7 +18,7 @@ const links = [
 
 const name = "Gaku Fujimoto";
 
-const Description = ({isImgLoaded}) => {
+const Description = ({ isImgLoaded }) => {
   const [text, setText] = useState("");
   const [animate, setAnimate] = useState(false);
   const intValRef = useRef(null);
@@ -31,17 +31,20 @@ const Description = ({isImgLoaded}) => {
 
   useEffect(() => {
     if (animate) {
-      intValRef.current = setInterval(() => {
-        setText((prevText) => {
-          const updateText = name.substring(0, prevText.length + 1);
-          if (updateText == name) setAnimate(false);
-          return updateText;
-        });
-      }, 270);
+      setTimeout(() => {
+        intValRef.current = setInterval(() => {
+          setText((prevText) => {
+            const updateText = name.substring(0, prevText.length + 1);
+            if (updateText === name) {
+              clearInterval(intValRef.current);
+              setAnimate(false);
+            }
+            return updateText;
+          });
+        }, 270);
+      }, 1750);
     }
-    return () => {
-      clearInterval(intValRef.current);
-    };
+    return () => clearInterval(intValRef.current);
   }, [animate]);
 
   return (
@@ -59,7 +62,7 @@ const Description = ({isImgLoaded}) => {
               className="border-r-2 border-light-theme-text dark:border-white"
               initial={{ opacity: 1 }}
               animate={{ opacity: 0 }}
-              transition={{ repeat: 6, duration: 1, delay: 4 }}
+              transition={{ repeat: 6, duration: 1, delay: 6 }}
             ></motion.span>
           ) : (
             ""
