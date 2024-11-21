@@ -5,6 +5,7 @@ const ProfImage = ({ onImgLoad }) => {
   return (
     <motion.div
       className="size-[15.75rem] self-center overflow-hidden bg-light-theme-2 sm:size-[18.75rem] lg:size-[22.75rem] dark:bg-dark-theme-2"
+      initial={{ borderRadius: "38% 62% 37% / 41% 44% 56% 59%" }}
       animate={{
         borderRadius: [
           "38% 62% 37% / 41% 44% 56% 59%",
