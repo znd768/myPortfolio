@@ -53,7 +53,7 @@ const Description = ({ isImgLoaded }) => {
         <div className="h-22">Hello, I&apos;m</div>
         <div className="h-22">
           <div
-            className={`inline-block text-indigo-400 dark:text-dark-theme-3 ${animate ? "" : "after:text-light-theme-text after:content-['.'] dark:after:text-white"}`}
+            className={`inline-block text-indigo-400 dark:text-dark-theme-3 ${isImgLoaded && !animate ? "after:content-['.'] dark:after:text-white after:text-light-theme-text" : ""}`}
           >
             {text}
           </div>
