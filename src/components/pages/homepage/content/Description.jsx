@@ -96,7 +96,7 @@ const Description = ({ isImgLoaded }) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col gap-y-2">
+      {/* <div className="flex flex-col gap-y-2">
         <h3 className="text-xl lg:text-4xl">Links</h3>
         <div className="flex flex-row flex-wrap gap-x-3">
           {links.map((item) => (
@@ -111,7 +111,7 @@ const Description = ({ isImgLoaded }) => {
             </a>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
