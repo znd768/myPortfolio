@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const drawCarrer = {
+const drawCareer = {
   initial: { opacity: 0 },
   animate: (i) => {
     const delay = (i + 1) * 1.2 + 0.1;
@@ -15,7 +15,7 @@ const drawCarrer = {
   },
 };
 
-const carrer = [
+const career = [
   {
     when: "2016",
     event: ["札幌西高等学校卒業", "静岡大学情報学部入学"],
@@ -46,18 +46,18 @@ const margin = [
   "mt-[calc(668px-482px-6rem)]",
 ];
 
-const CarrerDesc = ({ inView }) => {
+const CareerDesc = ({ inView }) => {
   return (
     <motion.div
       className="col-start-3 -col-end-1 flex h-full flex-grow flex-col items-center sm:col-start-4 sm:-col-end-2 md:col-start-7 md:-col-end-4 lg:col-start-4 lg:-col-end-1"
       initial="initial"
       animate={inView && "animate"}
     >
-      {carrer.map((v, i) => {
+      {career.map((v, i) => {
         return (
           <motion.div
             className={`relative ${margin[i]} grid h-24 w-full place-items-center rounded-lg bg-trans-white drop-shadow-xl dark:bg-dark-theme-1 pl-[6%] sm:pl-[10%]`}
-            variants={drawCarrer}
+            variants={drawCareer}
             custom={i + 1}
             key={v.when}
           >
@@ -75,4 +75,4 @@ const CarrerDesc = ({ inView }) => {
   );
 };
 
-export default CarrerDesc;
+export default CareerDesc;

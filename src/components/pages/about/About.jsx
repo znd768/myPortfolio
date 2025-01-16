@@ -1,5 +1,5 @@
 import React from "react";
-import Carrer from "./pageContent/Carrer";
+import Career from "./pageContent/Career";
 import Personality from "./pageContent/Personality";
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
         About Me
       </h1>
       <Personality />
-      <Carrer />
+      <Career />
     </div>
   );
 };

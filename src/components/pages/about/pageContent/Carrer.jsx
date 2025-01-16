@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import CarrerDesc from "./carrerContent/CarrerDesc";
-import CarrerChart from "./carrerContent/CarrerChart";
+import CareerDesc from "./careerContent/CareerDesc";
+import CareerChart from "./careerContent/CareerChart";
 import { useInView } from "framer-motion";
 
-const Carrer = () => {
+const Career = () => {
   const ref = useRef();
   const inView = useInView(ref, { margin: "-50% 0px", once: true });
 
@@ -13,13 +13,13 @@ const Carrer = () => {
       ref={ref}
     >
       <h2 className="col-start-2 col-end-12 flex h-12 items-end text-xl md:col-start-3 md:col-end-19 lg:h-24 lg:items-center lg:text-2xl xl:text-3xl">
-        My Carrer
+        My Career
       </h2>
       {/* left side */}
       <div className="col-start-2 -col-end-2 grid grid-cols-subgrid md:col-start-2 md:-col-end-2 lg:col-start-2 lg:col-end-11">
         {/* chart */}
-        <CarrerChart inView={inView} />
-        <CarrerDesc inView={inView} />
+        <CareerChart inView={inView} />
+        <CareerDesc inView={inView} />
       </div>
       {/* right side */}
       <div className="hidden md:col-start-12 md:-col-end-1 lg:block lg:h-[960px]">
@@ -36,4 +36,4 @@ const Carrer = () => {
   );
 };
 
-export default Carrer;
+export default Career;
