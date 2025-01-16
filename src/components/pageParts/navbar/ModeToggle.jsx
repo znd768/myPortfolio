@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { useThemeUpdate } from '../../pageFunctions/ThemeContext';
+import { useTheme, useThemeUpdate } from '../../pageFunctions/ThemeContext';
 import { motion } from 'framer-motion'
 
 const ModeToggle = () => {
-  const [isOn, setIsOn] = useState(false);
+  const isDarkMode = useTheme();
   const themeUpdate = useThemeUpdate()
   const spring = {
     type: "spring",
@@ -14,11 +13,10 @@ const ModeToggle = () => {
     <div className="flex flex-col items-center justify-center">
       <div
         className={`flex h-12 w-20 cursor-pointer items-center rounded-full bg-white/40 p-2 ${
-          isOn ? "justify-end" : "justify-start"
+          isDarkMode ? "justify-start" : "justify-end"
         }`}
         onClick={() => {
           themeUpdate();
-          setIsOn(!isOn);
         }}
       >
         <motion.div
