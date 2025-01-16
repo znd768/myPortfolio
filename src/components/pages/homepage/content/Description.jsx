@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -20,24 +20,17 @@ const name = "Gaku Fujimoto";
 
 const Description = ({ isImgLoaded }) => {
   const [text, setText] = useState("");
-  const [animate, setAnimate] = useState(false);
   const intValRef = useRef(null);
+  const animateEnded = text === name;
 
   useEffect(() => {
     if (isImgLoaded) {
-      setAnimate(true);
-    }
-  }, [isImgLoaded]);
-
-  useEffect(() => {
-    if (animate) {
       setTimeout(() => {
         intValRef.current = setInterval(() => {
           setText((prevText) => {
             const updateText = name.substring(0, prevText.length + 1);
             if (updateText === name) {
               clearInterval(intValRef.current);
-              setAnimate(false);
             }
             return updateText;
           });
@@ -45,7 +38,7 @@ const Description = ({ isImgLoaded }) => {
       }, 1750);
     }
     return () => clearInterval(intValRef.current);
-  }, [animate]);
+  }, [isImgLoaded]);
 
   return (
     <div className="flex flex-col gap-4 md:gap-6 lg:w-[56%] lg:justify-center xl:w-[48%]">
@@ -53,7 +46,7 @@ const Description = ({ isImgLoaded }) => {
         <div className="h-22">Hello, I&apos;m</div>
         <div className="h-22">
           <div
-            className={`inline-block text-indigo-400 dark:text-dark-theme-3 ${isImgLoaded && !animate ? "after:content-['.'] dark:after:text-white after:text-light-theme-text" : ""}`}
+            className={`inline-block text-indigo-400 dark:text-dark-theme-3 ${isImgLoaded && animateEnded ? "after:content-['.'] dark:after:text-white after:text-light-theme-text" : ""}`}
           >
             {text}
           </div>
