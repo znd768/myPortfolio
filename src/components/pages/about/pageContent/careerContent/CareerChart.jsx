@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const drawChart = {
@@ -16,7 +15,7 @@ const drawChart = {
   },
 };
 
-const CareerChart = ({ inView }) => {
+const CareerChart = () => {
   return (
     <div className="col-start-1 col-end-2 flex flex-col items-center sm:col-start-2 sm:col-end-3 md:col-start-4 md:col-end-5 lg:col-start-1 lg:col-end-3 xl:col-start-2">
       <motion.svg
@@ -26,7 +25,7 @@ const CareerChart = ({ inView }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         initial="initial"
-        animate={inView && "animate"}
+        animate="animate"
       >
         <motion.line
           x1="18"
@@ -66,9 +65,7 @@ const CareerChart = ({ inView }) => {
           strokeWidth="4"
           strokeDasharray="8 8"
           initial={{ y2: 498 }}
-          animate={
-            inView && { y2: 658, transition: { delay: 4.8, duration: 3 } }
-          }
+          animate={{ y2: 658, transition: { delay: 4.8, duration: 3 }} }
           className="stroke-dark-theme-black dark:stroke-white"
         />
         <motion.circle

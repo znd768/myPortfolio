@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import CareerDesc from "./careerContent/CareerDesc";
 import CareerChart from "./careerContent/CareerChart";
 import { useInView } from "framer-motion";
@@ -18,8 +18,12 @@ const Career = () => {
       {/* left side */}
       <div className="col-start-2 -col-end-2 grid grid-cols-subgrid md:col-start-2 md:-col-end-2 lg:col-start-2 lg:col-end-11">
         {/* chart */}
-        <CareerChart inView={inView} />
-        <CareerDesc inView={inView} />
+        {inView && (
+          <>
+            <CareerChart />
+            <CareerDesc />
+          </>
+        )}
       </div>
       {/* right side */}
       <div className="hidden md:col-start-12 md:-col-end-1 lg:block lg:h-[960px]">
