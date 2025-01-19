@@ -1,5 +1,3 @@
-import React from "react";
-
 const FormInput = ({ tag, id, label, required, ...other }) => {
   return (
     <div className="flex flex-col">
@@ -7,7 +5,7 @@ const FormInput = ({ tag, id, label, required, ...other }) => {
         {label}
         {required && <span className="text-red-500"> *</span>}
       </label>
-      {tag == "input" ? (
+      {tag === "input" ? (
         <input
           id={id}
           {...other}

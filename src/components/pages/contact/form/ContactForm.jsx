@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import FormInput from "./FormInput";
 import { inputList } from "./inputList";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -22,7 +22,15 @@ const encode = (data) => {
 const ContactForm = () => {
   const [formInputs, setFormInputs] = useState(initialInputs);
   const [btnDisabled, setBtnDisabled] = useState(true);
-  const recapthcaRef = useRef();
+  const recaptchaRef = useRef();
+
+  useEffect(() => {
+    return () => {
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+    };
+  }, []);
 
   const handleChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
@@ -30,7 +38,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const recaptchaValue = recapthcaRef.current.getValue();
+    const recaptchaValue = recaptchaRef.current.getValue();
 
     fetch("/", {
       method: "POST",
@@ -67,7 +75,7 @@ const ContactForm = () => {
           );
         })}
         <ReCAPTCHA
-          ref={recapthcaRef}
+          ref={recaptchaRef}
           sitekey={RECAPTCHA_KEY}
           size="normal"
           id="recaptcha-google"
