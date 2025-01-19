@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import FormInput from "./FormInput";
 import { inputList } from "./inputList";
 import ReCAPTCHA from "react-google-recaptcha";
