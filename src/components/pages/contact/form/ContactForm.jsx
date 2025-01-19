@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import FormInput from "./FormInput";
 import { inputList } from "./inputList";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -23,6 +23,14 @@ const ContactForm = () => {
   const [formInputs, setFormInputs] = useState(initialInputs);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const recaptchaRef = useRef();
+
+  useEffect(() => {
+    return () => {
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+    };
+  }, []);
 
   const handleChange = (e) => {
     setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
