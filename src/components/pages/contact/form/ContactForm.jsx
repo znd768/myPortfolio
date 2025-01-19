@@ -79,6 +79,7 @@ const ContactForm = () => {
           sitekey={RECAPTCHA_KEY}
           size="normal"
           id="recaptcha-google"
+          key="recaptcha-google"
           onChange={() => {
             setBtnDisabled(false);
           }}
