@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const drawCareer = {
@@ -46,12 +45,12 @@ const margin = [
   "mt-[calc(668px-482px-6rem)]",
 ];
 
-const CareerDesc = ({ inView }) => {
+const CareerDesc = () => {
   return (
     <motion.div
       className="col-start-3 -col-end-1 flex h-full flex-grow flex-col items-center sm:col-start-4 sm:-col-end-2 md:col-start-7 md:-col-end-4 lg:col-start-4 lg:-col-end-1"
       initial="initial"
-      animate={inView && "animate"}
+      animate="animate"
     >
       {career.map((v, i) => {
         return (
